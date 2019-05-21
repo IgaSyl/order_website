@@ -9,9 +9,6 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style.css">
     <title>order form mail</title>
-    <!--<style type="text/css">   TUTAJ MOŻESZ OSTYLOAC INFO O WYSŁANEJ WIADOMOŚĆ
-    </style>-->
-
 </head>
 
 <body>
@@ -46,8 +43,8 @@ $mail = new PHPMailer;
 $mail->isSMTP(); 				
 $mail->Host = 'smtp.gmail.com'; 		
 $mail->SMTPAuth = true; 			
-$mail->Username = 'iganowak02@gmail.com'; 
-$mail->Password = 'phpmail1';			
+$mail->Username = ''; 
+$mail->Password = '';			
 $mail->SMTPSecure = 'tls';		
 $mail->Port = 587;				
 $mail->CharSet = "UTF-8";                       
