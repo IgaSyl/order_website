@@ -43,8 +43,8 @@ $mail = new PHPMailer;
 $mail->isSMTP(); 				
 $mail->Host = 'smtp.gmail.com'; 		
 $mail->SMTPAuth = true; 			
-$mail->Username = ''; 
-$mail->Password = '';			
+$mail->Username = 'iganowak02@gmail.com'; 
+$mail->Password = 'phpmail1';			
 $mail->SMTPSecure = 'tls';		
 $mail->Port = 587;				
 $mail->CharSet = "UTF-8";                       
@@ -72,7 +72,7 @@ $mail->Body    = "
         </style>
     </head>
     <body>
-        <h2>: zamówienie projektu strony www.</h2>
+        <h2>Zamówienie projektu strony www</h2>
         <p>data zamówienia:<b> $data </b>o godz. $czas</p>
         <h3>Typ strony responsywnej:</h3>
         <h4> $webType</h4>
@@ -105,7 +105,85 @@ if(!$mail->send()) {
 	echo "</div>";
 	
 }
-
+        try {
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+           
+                $connect_to_db = new PDO('mysql:host=localhost; dbname=form; charset=utf8', 'root', 'admin');
+                $connect_to_db -> exec("SET NAMES 'utf8'");
+                $connect_to_db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        //setAttribute -> błędy w zapytaniach raportowane jako wyjątki.
+        //Operator wywołania `` -> uruchamia zew programy lub polecenia powłoki       
+        // prepare() robie szkielet zapytania
+        $new_orderValues = 'INSERT INTO `formularz` (`webType`, `attachedFileName`, `colorPicker`, `colorDescription`, `webHeader`, `contact`, `aboutCompany`, `additionalMenuEl`, `rodo`, `googleMapKey`, `created`) VALUES(
+            
+            :webType,
+            :attachedFileName,
+            :colorPicker,
+            :colorDescription,
+            :webHeader, 
+            :contact, 
+            :aboutCompany, 
+            :additionalMenuEl,
+            :rodo,
+            :googleMapKey,
+            NOW())';
+        
+        $new_order = $connect_to_db -> prepare($new_orderValues);
+        
+        $new_order -> bindValue(':webType', $webType, PDO::PARAM_STR);
+        $new_order -> bindValue(':attachedFileName', $attachedFileName, PDO::PARAM_STR);
+        $new_order -> bindValue(':colorPicker', $colorPicker, PDO::PARAM_STR);
+        $new_order -> bindValue(':colorDescription', $colorDescription, PDO::PARAM_STR);
+        $new_order -> bindValue(':webHeader', $webHeader, PDO::PARAM_STR);
+        $new_order -> bindValue(':contact', $contact, PDO::PARAM_STR);
+        $new_order -> bindValue(':aboutCompany', $aboutCompany, PDO::PARAM_STR); 
+        $new_order -> bindValue(':additionalMenuEl', $additionalMenuEl, PDO::PARAM_STR); 
+        $new_order -> bindValue(':rodo', $rodo); 
+        $new_order -> bindValue(':googleMapKey', $googleMapKey, PDO::PARAM_STR);
+        
+        $new_order -> execute();
+        $orderNo = $connect_to_db->lastInsertId();
+                
+                
+                echo "<div class= 'container'>";
+                echo "<p>Przystępujemy do wdrożenia serwisu internetowego.</p>";
+                
+                echo "<p>zamówienie nr: $orderNo</p>";
+                echo "<p>data zamówienia: <b>$data</b> o godzinie $czas</p>";
+                echo "<p style='margin-top: 20px;'>pozdrawiamy,<br>
+                Dział Serwisu i Wdrożeń <br>
+                Galactica</p>";
+                echo "</div>";
+                
+                }else{
+                    echo "proszę uzupełnić formularz i wysłać";
+                }
+            }
+                
+            catch(PDOException $e){
+                echo "połączenie z bazą nieudane "; 
+                exit;  		
+                }
+        
+                /* tą obsługę błędu nie wiem jak napisać s.61 */
+        /*
+            $new_orderValues1 = 'SELECT id, webType, colorPicker, colorDescription, webHeader, contact, aboutCompany, additionalMenuEl, rodo, googleMapKey, created
+                                FROM formularz
+                                WHERE id = formularz_id';
+                                      // co to????
+           try {
+               $new_order1 = $connect_to_db -> prepare($new_orderValues1);
+               if($new_order1){
+                   $new_order1-> execute(array(
+                       "formularz_id"=> 1)
+                   );
+                   $form= $new_order1->fetch();
+               }
+           }         catch(PDOException $e){
+            echo "połączenie z bazą nieudane: " .$e->getMessage(); 
+           }
+        
 ?>
 
 </body>
