@@ -105,16 +105,12 @@ if(!$mail->send()) {
 	echo "</div>";
 	
 }
-        try {
-            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+try {
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
            
-                $connect_to_db = new PDO('mysql:host=localhost; dbname=form; charset=utf8', 'root', 'admin');
-                $connect_to_db -> exec("SET NAMES 'utf8'");
-                $connect_to_db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
-        //setAttribute -> błędy w zapytaniach raportowane jako wyjątki.
-        //Operator wywołania `` -> uruchamia zew programy lub polecenia powłoki       
-        // prepare() robie szkielet zapytania
+        $connect_to_db = new PDO('mysql:host=localhost; dbname=form; charset=utf8', 'root', 'admin');
+        $connect_to_db -> exec("SET NAMES 'utf8'");
+        $connect_to_db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $new_orderValues = 'INSERT INTO `formularz` (`webType`, `attachedFileName`, `colorPicker`, `colorDescription`, `webHeader`, `contact`, `aboutCompany`, `additionalMenuEl`, `rodo`, `googleMapKey`, `created`) VALUES(
             
             :webType,
@@ -130,7 +126,6 @@ if(!$mail->send()) {
             NOW())';
         
         $new_order = $connect_to_db -> prepare($new_orderValues);
-        
         $new_order -> bindValue(':webType', $webType, PDO::PARAM_STR);
         $new_order -> bindValue(':attachedFileName', $attachedFileName, PDO::PARAM_STR);
         $new_order -> bindValue(':colorPicker', $colorPicker, PDO::PARAM_STR);
@@ -145,33 +140,27 @@ if(!$mail->send()) {
         $new_order -> execute();
         $orderNo = $connect_to_db->lastInsertId();
                 
-                
-                echo "<div class= 'container'>";
-                echo "<p>Przystępujemy do wdrożenia serwisu internetowego.</p>";
-                
-                echo "<p>zamówienie nr: $orderNo</p>";
-                echo "<p>data zamówienia: <b>$data</b> o godzinie $czas</p>";
-                echo "<p style='margin-top: 20px;'>pozdrawiamy,<br>
-                Dział Serwisu i Wdrożeń <br>
-                Galactica</p>";
-                echo "</div>";
-                
-                }else{
-                    echo "proszę uzupełnić formularz i wysłać";
-                }
+            echo "<div class= 'container'>";
+            echo "<p>Przystępujemy do wdrożenia serwisu internetowego.</p>";    
+            echo "<p>zamówienie nr: $orderNo</p>";
+            echo "<p>data zamówienia: <b>$data</b> o godzinie $czas</p>";
+            echo "<p style='margin-top: 20px;'>pozdrawiamy,<br>
+            Dział Serwisu i Wdrożeń <br>
+            Galactica</p>";
+            echo "</div>";   
+            }else{
+                echo "proszę uzupełnić formularz i wysłać";
             }
-                
+        }    
             catch(PDOException $e){
                 echo "połączenie z bazą nieudane "; 
                 exit;  		
                 }
         
-                /* tą obsługę błędu nie wiem jak napisać s.61 */
-        /*
-            $new_orderValues1 = 'SELECT id, webType, colorPicker, colorDescription, webHeader, contact, aboutCompany, additionalMenuEl, rodo, googleMapKey, created
+        $new_orderValues1 = 'SELECT id, webType, colorPicker, colorDescription, webHeader, contact, aboutCompany, additionalMenuEl, rodo, googleMapKey, created
                                 FROM formularz
                                 WHERE id = formularz_id';
-                                      // co to????
+                                      
            try {
                $new_order1 = $connect_to_db -> prepare($new_orderValues1);
                if($new_order1){
