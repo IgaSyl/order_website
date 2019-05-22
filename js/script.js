@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   }
 
   inputs.forEach(input => input.addEventListener('change', handleUpdate));
-
+ 
 });
 
 })();

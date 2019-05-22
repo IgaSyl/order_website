@@ -32,64 +32,62 @@
         <form class="needs-validation" novalidate id="orderForm" method="POST" enctype="multipart/form-data"
             action="mail_db.php">
 
-            <p>W odpowiedzi proszę zaznaczyć wybrany wzór np. <em>TYP N</em>.</p>
+            <p>W odpowiedzi proszę zaznaczyć wybrany wzór np. <span>N</span>.</p>
             <div class="container row">
-
-                <div class="col">
+                <div class="col-lg-3 col-md-6">
                     <div class="form-check form-check-inline form-check webtype">
                         <input class="form-check-input" type="radio" id="typeM" name="web-type" value="Typ M" required>
-                        <label class="form-check-label form-check-label--M" for="typeM"></label>
+                        <label class="form-check-label form-check-label--M" for="typeM">M</label>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="form-check form-check-inline webtype">
-                        <input class="form-check-input" type="radio" id="typeN" name="web-type" value="Typ N" required>
-                        <label class="form-check-label form-check-label--N" for="typeN"></label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-check form-check-inline webtype">
-                        <input class="form-check-input" type="radio" id="typeP" name="web-type" value="Typ P" required>
-                        <label class="form-check-label form-check-label--P" for="typeP"></label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-check form-check-inline webtype">
-                        <input class="form-check-input" type="radio" id="typeR" name="web-type" value="Typ R" required>
-                        <label class="form-check-label form-check-label--R" for="typeR"></label>
-                        <div class="valid-feedback"></div>
-                        <div class="invalid-feedback">Proszę wybrać szablon</div>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-3 btn-presentation">
-                    <div class="web-type">Typ M</div>
                     <a href="http://f.formy.net/projekty/template-m" class="show-presentation" target="_blank"
                         title="Prezentacja szablonu M">Zobacz prezentację</a>
                 </div>
-                <div class="col-3 btn-presentation">
-                    <div class="web-type">Typ N</div>
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="form-check form-check-inline webtype">
+                        <input class="form-check-input" type="radio" id="typeN" name="web-type" value="Typ N" required>
+                        <label class="form-check-label form-check-label--N" for="typeN">N</label>
+                    </div>
                     <a href="http://f.formy.net/projekty/template-n" class="show-presentation" target="_blank"
                         title="Prezentacja szablonu N">Zobacz prezentację</a>
                 </div>
-                <div class="col-3 btn-presentation">
-                    <div class="web-type">Typ P</div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="form-check form-check-inline webtype">
+                        <input class="form-check-input" type="radio" id="typeP" name="web-type" value="Typ P" required>
+                        <label class="form-check-label form-check-label--P" for="typeP">P</label>
+                    </div>
                     <a href="http://f.formy.net/projekty/template-p" class="show-presentation" target="_blank"
                         title="Prezentacja szablonu P">Zobacz prezentację</a>
                 </div>
-                <div class="col-3 btn-presentation ">
-                    <div class="web-type">Typ R</div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="form-check form-check-inline webtype">
+                        <input class="form-check-input" type="radio" id="typeR" name="web-type" value="Typ R" required>
+                        <label class="form-check-label form-check-label--R" for="typeR">R</label>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Proszę wybrać szablon</div>
+                    </div>
                     <a href="http://f.formy.net/projekty/template-r" class="show-presentation" target="_blank"
                         title="Prezentacja szablonu R">Zobacz prezentację</a>
                 </div>
             </div>
-
+            <!-- <div class="row">
+                <div class="col-3 btn-presentation">
+                    <a href="http://f.formy.net/projekty/template-m" class="show-presentation" target="_blank"
+                        title="Prezentacja szablonu M">Zobacz prezentację</a>
+                </div>
+                <div class="col-3 btn-presentation">
+                    <a href="http://f.formy.net/projekty/template-n" class="show-presentation" target="_blank"
+                        title="Prezentacja szablonu N">Zobacz prezentację</a>
+                </div>
+                <div class="col-3 btn-presentation">
+                    <a href="http://f.formy.net/projekty/template-p" class="show-presentation" target="_blank"
+                        title="Prezentacja szablonu P">Zobacz prezentację</a>
+                </div>
+                <div class="col-3 btn-presentation ">
+                    <a href="http://f.formy.net/projekty/template-r" class="show-presentation" target="_blank"
+                        title="Prezentacja szablonu R">Zobacz prezentację</a>
+                </div>
+            </div> -->
             <div class="web-details">2. Szczegółowe wytyczne realizacji.</div>
-
             <div class="option">
                 <p class="option-title">1) Logo firmy </p>
                 <p class="option-description">- proszę przesłać nam logo w formacie jpg lub png (najlepiej w

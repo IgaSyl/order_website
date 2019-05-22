@@ -6,7 +6,6 @@
 
 body {
     padding-top: 7%;
-
 }
 
 .container {
@@ -23,9 +22,6 @@ body {
     max-width: 1110px;
     margin: 0 auto;
 }
-
-
-
 
 .resWeb-type,
 .web-details {
@@ -74,70 +70,34 @@ p {
     background-color: #a9022e;
 }
 
-
-
-@media(max-width: 680px) {
-    .select-color {
-        background-image: linear-gradient(to right, red, orange, yellow, green, rgb(170, 170, 218), rgb(186, 132, 224), violet);
-        height: 80px;
-        border-radius: .25rem;
-        margin-bottom: 15px;
-        width: 100%;
-        padding: 10px;
-        font-weight: 500;
-    }
-
-    p {
-        width: 100%;
-        text-align: justify;
-        font-size: 18px;
-    }
-
-    .formTitle {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-size: 18px;
-        font-weight: bold;
-        color: white;
-        background-color: #a9022e;
-        ;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .resWeb-type,
-    .web-details {
-        border-bottom: 1px solid grey;
-        color: #a9022e;
-        ;
-        font-size: 26px;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-
-    .form-group {
-        width: 100%;
-    }
-
-    .resWeb-type,
-    .web-details {
-        border-bottom: 1px solid grey;
-        color: #a9022e;
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-
-
+.resWeb-type,
+.web-details {
+    border-bottom: 1px solid grey;
+    color: #a9022e;
+    ;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
+
+.form-group {
+    width: 100%;
+}
+
+.resWeb-type,
+.web-details {
+    border-bottom: 1px solid grey;
+    color: #a9022e;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
 
 a,
 a:hover {
     color: #a9022e;
 }
-
-
-
 
 img {
     max-width: 100%;
@@ -149,13 +109,21 @@ img {
 }
 
 .row {
-
     margin-bottom: 15px;
 }
 
+span{
+    font-weight: bold;
+}
+span::before{
+    content: "<"
+}
+span::after{
+    content: ">"
+}
 
 a.show-presentation {
-    width: 200px;
+    width: 90%;
     height: 50px;
     margin: 20px 0px;
     background: #a9022e url(../sources/img/icon-resize.png) no-repeat 256px center;
@@ -174,6 +142,7 @@ a.show-presentation {
 .form-check-label--P,
 .form-check-label--R {
     filter: brightness(1.5) grayscale(1) opacity(.7);
+    color: #a9022e;
 }
 
 .form-check-label--M:hover,
@@ -187,18 +156,18 @@ a.show-presentation {
 input[type="radio"] {
     display: none;
 }
-
+/* 
+.form-check-label{
+    border: 2px solid none;
+    padding: 5%;
+  } */
 
 input[type="radio"]:checked+label {
-
-    border: 1px solid #a9022e;
     background-color: #a9022e;
     opacity: 0, 5;
     filter: none;
-}
-
-
-
+    padding: 5%;
+}  
 
 .form-check-label--M {
     background-image: url(../sources/img/templatem.jpg);
@@ -268,6 +237,7 @@ label[for=base3] {
 
 input[type="color"] {
     width: 64px;
+    cursor: pointer;
 }
 
 :root {
@@ -284,13 +254,10 @@ label[for=base2] {
     color: var(--base2);
 }
 
-
-
 @media(min-width:768px) and (max-width:991px) {
 
-
     a.show-presentation {
-        width: 100%;
+        width: 70%;
         height: 50px;
         margin: 20px 0px;
         background: #a9022e url(../sources/img/icon-resize.png) no-repeat 256px center;
@@ -303,12 +270,20 @@ label[for=base2] {
         display: block;
     }
 
+    body {
+        padding-top: 15%;
+    }
+
+    label[for=base3] {
+        margin-right: 17.5%;
+    }
+
 }
 
 
 @media(max-width:767px) {
     a.show-presentation {
-        width: 100%;
+        width: 47%;
         height: 50px;
 
         background: #a9022e url(../sources/img/icon-resize.png) no-repeat 256px center;
@@ -319,6 +294,9 @@ label[for=base2] {
         line-height: 50px;
         text-align: center;
         display: inline-block;
+    }
+    label[for=base3] {
+        margin-right: 19.5%;
     }
 }
 
@@ -335,11 +313,11 @@ label[for=base2] {
     }
 
     body {
-        padding-top: 30%;
+        padding-top: 26%;
     }
 
     a.show-presentation {
-        width: 100%;
+        width: 76%;
         height: 50px;
         background: #a9022e url(../sources/img/icon-resize.png) no-repeat 256px center;
         background: #a9022e url(../images/virgo/icon-resize.png) no-repeat 256px center;
@@ -352,19 +330,10 @@ label[for=base2] {
     }
 
     label[for=base3] {
-        margin-right: 39.5%;
+        margin-right: 19.5%;
     }
+
     label[for=base1] {
         margin-right: 12%;
-    }
-}
-
-@media(max-width:767px) {
-    body {
-        padding-top: 15%;
-    }
-
-    label[for=base3] {
-        margin-right: 20.5%;
     }
 }
