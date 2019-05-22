@@ -17,7 +17,8 @@
         <div class="resWeb-type">1. Typ strony responsywnej.</div>
     </div>
     <div class="container ">
-        <p class="option-description resWebTypeDes">Na wstępie wybierają Państwo typ strony z poniższych wzorów.
+        <p class="option-description resWebTypeDes container">Na wstępie wybierają Państwo typ strony z poniższych
+            wzorów.
             Webmaster Galactica
             opracowuje formę graficzną na podstawie wybranego typu szczegółowych wytycznych, podanych w dalszej części.
             Prezentacje i przykłady dostępnych stron responsywnych umieszczono na naszej stronie:<br>
@@ -62,18 +63,18 @@
                     <div class="form-check form-check-inline webtype">
                         <input class="form-check-input" type="radio" id="typeR" name="web-type" value="Typ R" required>
                         <label class="form-check-label form-check-label--R" for="typeR">R</label>
-                        <div class="valid-feedback"></div>
-                        <div class="invalid-feedback">Proszę wybrać szablon</div>
+                        <!-- <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Proszę wybrać szablon</div> -->
                     </div>
                     <a href="http://f.formy.net/projekty/template-r" class="show-presentation" target="_blank"
                         title="Prezentacja szablonu R">Zobacz prezentację</a>
                 </div>
             </div>
-           
+
             <div class="web-details">2. Szczegółowe wytyczne realizacji.</div>
             <div class="option">
-                <p class="option-title">1) Logo firmy </p>
-                <p class="option-description">- proszę przesłać nam logo w formacie jpg lub png (najlepiej w
+                <p class="option-title container">1) Logo firmy </p>
+                <p class="option-description container">- proszę przesłać nam logo w formacie jpg lub png (najlepiej w
                     maksymalnej dostępnej rozdzielczości),<br>
                     - jeżeli nie posiadają Państwo logo nasz grafik może na Państwa życzenie wykonać odpowiednio
                     zaaranżowany napis z nazwą firmy.</p>
@@ -98,7 +99,7 @@
                     <input id="base3" type="color" name="base3" value="#FFFFFF">
                 </div>
             </div>
-            <p class="option-description">W przypadku, gdy chcą Państwo dokładnie określić tematykę
+            <p class="option-description container">W przypadku, gdy chcą Państwo dokładnie określić tematykę
                 kolorystyczną,
                 mogą Państwo skorzystać z narzędzia do określania kolorów i przesłać nam kody wybranych barw:
                 <a href="http://www.colorpicker.com" target="_blank" title="Colorpicker">Colorpicker</a>.
@@ -113,7 +114,7 @@
 
             <div>
                 <p class="option-title">3) Nagłówek strony (zdjęcie bądź animacja)</p>
-                <p class="option-description">Jakie zdjęcie ma znaleźć się w nagłówku (o jakiej tematyce) np.:
+                <p class="option-description container">Jakie zdjęcie ma znaleźć się w nagłówku (o jakiej tematyce) np.:
                     <em>okolica
                         wiejska, wnętrze apartamentu, nowoczesny, tradycyjny, ludzie, rodzina, plac budowy,
                         nieruchomości komercyjne itp.</em><br>
@@ -162,7 +163,8 @@
             </div>
             <div>
                 <p class="option-title">6) Dodatkowe elementy menu.</p>
-                <p>Jeśli serwis ma zawierać jakieś niestandardowe treści (np. oferty kredytów, wycen nieruchomości,
+                <p class="container">Jeśli serwis ma zawierać jakieś niestandardowe treści (np. oferty kredytów, wycen
+                    nieruchomości,
                     świadectw energetycznych itp.) umieszczone pod dodatkowymi przyciskami w menu, prosimy o
                     przesłanie
                     listy dodatkowych modyfikacji oraz zamieszczenie treści, które będą umieszczone w odpowiednich
@@ -182,7 +184,8 @@
             </div>
             <div>
                 <p class="option-title">7) RODO - obowiązek informacyjny.</p>
-                <p>Proszę pamiętać o obowiązku informacyjnym tzn. jeśli firma przyjmuje dane klienta to musi on
+                <p class="container">Proszę pamiętać o obowiązku informacyjnym tzn. jeśli firma przyjmuje dane klienta
+                    to musi on
                     uzyskać
                     informacje, że administratorem bazy jest firma/osoba "X", że może się wypisać z bazy i
                     zaktualizować dane. Formuły i treści muszą Państwo opracować zgodnie z przygotowaną polityką
@@ -200,7 +203,8 @@
             </div>
             <div>
                 <p class="option-title">8) Mapy Google - konieczne przesłanie klucza.</p>
-                <p>W celu zapewnienia dostępu do usługi Google Maps na Państwa stronie internetowej prosimy o
+                <p class="container">W celu zapewnienia dostępu do usługi Google Maps na Państwa stronie internetowej
+                    prosimy o
                     wygenerowanie i dostarczenie nam darmowego klucza Google Api Maps, zarejestrowanego na własną
                     firmę/konto w Google. Instrukcję utworzenia klucza znajdą Państwo w pomocy:<br>
                     <a href="https://pomocvirgo.galapp.net/#143-pl" target="_blank" title="pomoc Virgo">pomoc
@@ -216,8 +220,25 @@
                 <div class="valid-feedback">Dziękuję za odpowiedź.</div>
                 <div class="invalid-feedback">Proszę uzupełnić pole.</div>
             </div>
+            <div>
+                <p class="option-title">9) Dane kontaktowe.</p>
+            </div>
+            <div class="form-group">
+                <label for="name">Imię, nazwisko:</label>
+                <textarea class="form-control" id="contactName" name="contactName" required
+                    placeholder="Imię, nazwisko..."></textarea>
+                <div class="valid-feedback">Dziękuję za odpowiedź.</div>
+                <div class="invalid-feedback">Proszę uzupełnić pole.</div>
+                <label for="email">adres email:</label>
+                <input type="email" class="form-control" id="email" name="email" required placeholder="adres email...">
+                <small id="emailHelp" class="form-text text-muted">Nie udostępniamy Twojego adresu email</small>
+                <div class="valid-feedback">Dziękuję za odpowiedź.</div>
+                <div class="invalid-feedback">Proszę uzupełnić pole.</div>
+            </div>
             <button type="submit" class="btn btn-danger">Wyślij</button>
         </form>
+
+
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

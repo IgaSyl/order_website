@@ -112,13 +112,15 @@ img {
     margin-bottom: 15px;
 }
 
-span{
+span {
     font-weight: bold;
 }
-span::before{
+
+span::before {
     content: "<"
 }
-span::after{
+
+span::after {
     content: ">"
 }
 
@@ -156,6 +158,7 @@ a.show-presentation {
 input[type="radio"] {
     display: none;
 }
+
 /* 
 .form-check-label{
     border: 2px solid none;
@@ -167,7 +170,7 @@ input[type="radio"]:checked+label {
     opacity: 0, 5;
     filter: none;
     padding: 5%;
-}  
+}
 
 .form-check-label--M {
     background-image: url(../sources/img/templatem.jpg);
@@ -254,6 +257,14 @@ label[for=base2] {
     color: var(--base2);
 }
 
+#contactName {
+    height: calc(2.25rem + 2px);
+    margin-bottom: 1%;
+}
+
+
+
+
 @media(min-width:768px) and (max-width:991px) {
 
     a.show-presentation {
@@ -295,6 +306,7 @@ label[for=base2] {
         text-align: center;
         display: inline-block;
     }
+
     label[for=base3] {
         margin-right: 19.5%;
     }
