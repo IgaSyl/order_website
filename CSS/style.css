@@ -128,8 +128,7 @@ a.show-presentation {
     width: 90%;
     height: 50px;
     margin: 20px 0px;
-    background: #a9022e url(../sources/img/icon-resize.png) no-repeat 256px center;
-    background: #a9022e url(../images/virgo/icon-resize.png) no-repeat 256px center;
+    background: #a9022e;
     font-size: 18px;
     font-weight: 300;
     color: #fff;
@@ -271,8 +270,6 @@ label[for=base2] {
         width: 70%;
         height: 50px;
         margin: 20px 0px;
-        background: #a9022e url(../sources/img/icon-resize.png) no-repeat 256px center;
-        background: #a9022e url(../images/virgo/icon-resize.png) no-repeat 256px center;
         font-size: 18px;
         font-weight: 300;
         color: #fff;
@@ -296,9 +293,6 @@ label[for=base2] {
     a.show-presentation {
         width: 47%;
         height: 50px;
-
-        background: #a9022e url(../sources/img/icon-resize.png) no-repeat 256px center;
-        background: #a9022e url(../images/virgo/icon-resize.png) no-repeat 256px center;
         font-size: 18px;
         font-weight: 300;
         color: #fff;
@@ -331,8 +325,6 @@ label[for=base2] {
     a.show-presentation {
         width: 76%;
         height: 50px;
-        background: #a9022e url(../sources/img/icon-resize.png) no-repeat 256px center;
-        background: #a9022e url(../images/virgo/icon-resize.png) no-repeat 256px center;
         font-size: 14px;
         font-weight: 300;
         color: #fff;
