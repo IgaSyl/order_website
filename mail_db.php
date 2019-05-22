@@ -26,6 +26,8 @@ $additionalMenuEl = trim($_POST['additionalMenuEl']);
 $rodo = trim($_POST['rodo']);
 $googleMapKey = trim($_POST['googleMapKey']);
 $attachedFileName =trim($_FILES['attachedFile']['name']);
+$name = trim($_POST['contactName']);
+$email =trim($_POST['email']);
 
 $data=date("Y-m-d");
 $czas=date("H:i");
@@ -86,6 +88,9 @@ $mail->Body    = "
         <p><span class='bold' >7) Dodatkowe elementy menu:</span><br> $additionalMenuEl</p>
         <p><span class='bold' >8) RODO:</span><br> $rodo</p>
         <p><span class='bold' >9) GoogleMapKey:</span><br> $googleMapKey</p>
+        <p><span class='bold' >9) Imię, nazwisko:</span><br> $name</p>
+        <p><span class='bold' >9) email:</span><br> $email</p>
+
     </body>
 </html>
 ";
