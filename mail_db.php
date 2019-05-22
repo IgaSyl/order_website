@@ -104,9 +104,13 @@ if (!empty($_FILES['attachedFile']) &&
 if(!$mail->send()) {
     echo 'Wystąpił błąd podczas wysyłania wiadomości! Błąd: ' . $mail->ErrorInfo;
 } else {					
-	echo "<div class= 'container' id='success_page' style='border-bottom: 2px solid #a9022e'>";
-    echo '<img src="./sources/img/logo.png" alt="logo" style="padding-bottom:100px"/>';
-	echo "<h3>Dziękujemy za zamówienie strony WWW.</h3>";
+	echo "<div class= 'container' id='success_page'>";
+        echo '<img src="./sources/img/logo.png" alt="logo" style="margin-bottom: 5%"/>';
+        echo "<h4 style='border-bottom: 2px solid #a9022e; padding: 1%; margin-bottom: 4%;'>Dziękujemy za zamówienie strony WWW.</h4>";
+        echo "<p style='width: 100%;'>data zamówienia: <b>$data</b> o godzinie $czas</p>";
+        echo "<p style='width: 100%;'>pozdrawiamy,<br>
+            Dział Serwisu i Wdrożeń <br>
+            Galactica</p>";  
 	echo "</div>";
 	
 }
@@ -158,7 +162,7 @@ try {
             }
         }    
             catch(PDOException $e){
-                echo "połączenie z bazą nieudane "; 
+                // echo "połączenie z bazą nieudane "; 
                 exit;  		
                 }
         
