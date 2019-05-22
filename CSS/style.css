@@ -39,15 +39,11 @@ body {
 
 .option-title {
     font-weight: bold;
-    margin-top: 15px;
+    padding: 2% 1% 0 0;
 }
 
-
-
 p:not(.resWebTypeDes) {
-
     margin-left: inherit;
-
 }
 
 p {
@@ -248,12 +244,34 @@ input[type="radio"]:checked+label {
 
 }
 
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    margin-right: 4%;
+    font-size: 1.1rem;
+}
+
 
 .web-type {
     margin-top: 30px;
 }
 
+input[type="color"] {
+    width: 64px;
+}
 
+:root{
+    --base1: #212529;
+    --base2:#212529;
+}
+
+label[for=base1]{
+    color: var(--base1);
+}
+
+label[for=base2]{
+    color: var(--base2);
+}
 
 
 @media(min-width:768px) and (max-width:991px) {

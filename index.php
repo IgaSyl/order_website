@@ -104,15 +104,20 @@
             </div>
             <div>
                 <p class="option-title">2) Kolorystyka strony</p>
-                <p class="option-description">- kolor tła (ewentualnie gradient, kolor przewodni)</p>
-                <p>- kolory belek nagłówkowych</p>
-
-                <p class="option-description">W przypadku, gdy chcą Państwo dokładnie określić tematykę
-                    kolorystyczną,
-                    mogą Państwo skorzystać z narzędzia do określania kolorów i przesłać nam kody wybranych barw:
-                    <a href="http://www.colorpicker.com" target="_blank" title="Colorpicker">Colorpicker</a>.
-                </p>
+                <div class="form-group">
+                    <label for="base1">- kolor przewodni 1</label>
+                    <input id="base1" type="color" name="base1" value="#c17584">
+                </div>
+                <div class="form-group">
+                    <label for="base2">- kolor przewodni 2</label>
+                    <input id="base2" type="color" name="base2" value="#c2f442">
+                </div>
             </div>
+            <p class="option-description">W przypadku, gdy chcą Państwo dokładnie określić tematykę
+                kolorystyczną,
+                mogą Państwo skorzystać z narzędzia do określania kolorów i przesłać nam kody wybranych barw:
+                <a href="http://www.colorpicker.com" target="_blank" title="Colorpicker">Colorpicker</a>.
+            </p>
             <div class="form-group">
                 <label for="web-color"></label>
                 <textarea name="colorDescription" class="form-control" id="web-color" rows="3" required
