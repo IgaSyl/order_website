@@ -69,24 +69,7 @@
                         title="Prezentacja szablonu R">Zobacz prezentację</a>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-3 btn-presentation">
-                    <a href="http://f.formy.net/projekty/template-m" class="show-presentation" target="_blank"
-                        title="Prezentacja szablonu M">Zobacz prezentację</a>
-                </div>
-                <div class="col-3 btn-presentation">
-                    <a href="http://f.formy.net/projekty/template-n" class="show-presentation" target="_blank"
-                        title="Prezentacja szablonu N">Zobacz prezentację</a>
-                </div>
-                <div class="col-3 btn-presentation">
-                    <a href="http://f.formy.net/projekty/template-p" class="show-presentation" target="_blank"
-                        title="Prezentacja szablonu P">Zobacz prezentację</a>
-                </div>
-                <div class="col-3 btn-presentation ">
-                    <a href="http://f.formy.net/projekty/template-r" class="show-presentation" target="_blank"
-                        title="Prezentacja szablonu R">Zobacz prezentację</a>
-                </div>
-            </div> -->
+           
             <div class="web-details">2. Szczegółowe wytyczne realizacji.</div>
             <div class="option">
                 <p class="option-title">1) Logo firmy </p>
