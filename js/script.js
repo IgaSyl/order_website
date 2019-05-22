@@ -26,8 +26,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
   function handleUpdate() {
     document.documentElement.style.setProperty(`--${this.name}`, this.value);
     colorArr.push(this.value);
+    const colorArr2 = (colorArr[2]===undefined) ? "##212529": colorArr[1]; 
+    const colorArr3 = (colorArr[2]===undefined) ? "#FFFFFF": colorArr[2]; 
     const colorDescription = document.querySelector('textarea[name=colorDescription]');
-    colorDescription.value = "wybrane kolory:" + colorArr[0] + ", " + colorArr[1];
+    colorDescription.value = "kolor 1:" + colorArr[0] + ", " + "kolor 2: " + " " + colorArr2 + ", " + "kolor 3:" + " " + colorArr3;
   }
 
   inputs.forEach(input => input.addEventListener('change', handleUpdate));

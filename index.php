@@ -105,12 +105,16 @@
             <div>
                 <p class="option-title">2) Kolorystyka strony</p>
                 <div class="form-group">
-                    <label for="base1">- kolor przewodni 1</label>
-                    <input id="base1" type="color" name="base1" value="#c17584">
+                    <label for="base1">- kolor przewodni 1 (menu)</label>
+                    <input id="base1" type="color" name="base1" value="#a9022e">
                 </div>
                 <div class="form-group">
-                    <label for="base2">- kolor przewodni 2</label>
-                    <input id="base2" type="color" name="base2" value="#c2f442">
+                    <label for="base2">- kolor przewodni 2 (nagłówki)</label>
+                    <input id="base2" type="color" name="base2" value="#212529">
+                </div>
+                <div class="form-group">
+                    <label for="base3">-kolor przewodni 3 (tło)</label>
+                    <input id="base3" type="color" name="base3" value="#FFFFFF">
                 </div>
             </div>
             <p class="option-description">W przypadku, gdy chcą Państwo dokładnie określić tematykę

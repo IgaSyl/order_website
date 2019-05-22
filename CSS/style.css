@@ -6,13 +6,18 @@
 
 body {
     padding-top: 7%;
+
+}
+
+.container {
+    background-color: var(--base3);
 }
 
 .navbar {
     font-size: 2rem;
     font-weight: bold;
     color: white;
-    background-color: #a9022e;
+    background-color: var(--base1);
     justify-content: center;
     padding: 1rem 1rem;
     max-width: 1110px;
@@ -40,6 +45,7 @@ body {
 .option-title {
     font-weight: bold;
     padding: 2% 1% 0 0;
+    color: var(--base2);
 }
 
 p:not(.resWebTypeDes) {
@@ -251,6 +257,10 @@ label {
     font-size: 1.1rem;
 }
 
+label[for=base3] {
+    margin-right: 11.5%;
+}
+
 
 .web-type {
     margin-top: 30px;
@@ -260,18 +270,20 @@ input[type="color"] {
     width: 64px;
 }
 
-:root{
-    --base1: #212529;
-    --base2:#212529;
+:root {
+    --base1: #a9022e;
+    --base2: #212529;
+    --base3: #fff;
 }
 
-label[for=base1]{
+label[for=base1] {
     color: var(--base1);
 }
 
-label[for=base2]{
+label[for=base2] {
     color: var(--base2);
 }
+
 
 
 @media(min-width:768px) and (max-width:991px) {
@@ -338,10 +350,21 @@ label[for=base2]{
         text-align: center;
         display: inline-block;
     }
+
+    label[for=base3] {
+        margin-right: 39.5%;
+    }
+    label[for=base1] {
+        margin-right: 12%;
+    }
 }
 
 @media(max-width:767px) {
     body {
         padding-top: 15%;
+    }
+
+    label[for=base3] {
+        margin-right: 20.5%;
     }
 }
